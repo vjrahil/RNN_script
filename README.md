@@ -20,4 +20,7 @@ Introduction In this project, you'll generate your own Seinfeld TV scripts using
 ```
 * All the code is available inside **dlnd_tv_script_generation**.
 
+* The preprocessed text is saved in  **preprocess.p**.
+* RNN model is saved in **trained_rnn.pt**.
+
 * Generated *fake* TV-Script is saved in **generated_script1.txt**.
