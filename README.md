@@ -18,7 +18,7 @@ Introduction In this project, you'll generate your own Seinfeld TV scripts using
 ``` 
       git clone https://github.com/vjrahil/Script-Generator
 ```
-* All the code is available inside **dlnd_tv_script_generation**.
+* All the code is available inside **dlnd_tv_script_generation.ipynb**.
 
 * The preprocessed text is saved in  **preprocess.p**.
 * RNN model is saved in **trained_rnn.pt**.
