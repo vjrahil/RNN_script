@@ -3,16 +3,16 @@ Introduction In this project, you'll generate your own Seinfeld TV scripts using
 
 ## Hyperparameters
 **Data Parameter**
-   * Sequence length = 10
-   * Batch Size = 128
+   * **Sequence length** = 10
+   * **Batch Size** = 128
    
 **Training Parameter**
-  * Epochs = 30
-  * Learning Rate = .001
-  * Embedding Dimension = 200
-  * Hidden Dimension in LSTM = 250
-  * n_layers(Number of RNN layers) = 2 
-  * Optimizer = Adam
+  * **Epochs** = 30
+  * **Learning Rate** = .001
+  * **Embedding Dimension** = 200
+  * **Hidden Dimension in LSTM** = 250
+  * **n_layers(Number of RNN layers)** = 2 
+  * **Optimizer** = Adam
 ## Project Information
 * Clone the directory by using this command.
 ``` 
