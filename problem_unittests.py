@@ -172,7 +172,7 @@ def test_rnn(RNN, train_on_gpu):
     # initialization
     correct_hidden_size = (n_layers, batch_size, hidden_dim)
     
-    if type(hidden) == tuple:
+    if type(hidden) is tuple:
         # LSTM
         assert_condition = hidden[0].size() == correct_hidden_size
     else:
@@ -185,7 +185,7 @@ def test_rnn(RNN, train_on_gpu):
     # output of rnn
     correct_hidden_size = (n_layers, batch_size, hidden_dim)
     
-    if type(hidden) == tuple:
+    if type(hidden) is tuple:
         # LSTM        
         assert_condition = hidden_out[0].size() == correct_hidden_size
     else:
@@ -231,7 +231,7 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
         
         loss, hidden_out = forward_back_prop(mock_decoder, mock_decoder_optimizer, mock_criterion, inp, target, hidden)
     
-    if type(hidden_out) == tuple:
+    if type(hidden_out) is tuple:
         # LSTM
         assert (hidden_out[0][0]==hidden[0][0]).sum()==batch_size*hidden_dim, 'Returned hidden state is the incorrect size.'
     else:
@@ -242,6 +242,6 @@ def test_forward_back_prop(RNN, forward_back_prop, train_on_gpu):
     assert mock_decoder.forward_called, 'Forward propagation not called.'
     assert mock_autograd_backward.called, 'Backward propagation not called'
     assert mock_decoder_optimizer.step.called, 'Optimization step not performed'
-    assert type(loss) == float, 'Wrong return type. Expected {}, got {}'.format(float, type(loss))
+    assert type(loss) is float, 'Wrong return type. Expected {}, got {}'.format(float, type(loss))
     
     _print_success_message()
